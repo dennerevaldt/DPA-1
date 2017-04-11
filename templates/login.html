@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <div class="account-wall">
+                <img class="profile-img" ng-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAAAAAAcD2kOAAAAAXNCSVQI5gpbmQAAA4JJREFUaIHt2llP4zAQAOAZJy2UVu1StrvSVoju8f9/EluEQOXoUujdJB4eoAfU17guPKzzFCnjfIntOM7E2IXP2cQnuRGOcIQjHOEIRzjCEf6ALfUtiAgAAEQfCiPm42lWQFI6rKV+NnZ92FF/urrjyknNh/aAxeJ6/sq+0OV2WfLPYroodYnB+UJsHEKRnQ/4fVRfAvN/qoPivpe8uyJMendsWdu5ML8o4GSrCsXDfbIdnPTTY2Zt664U8y4kd/33h3F2o3ABkpuZumG4MOZdAIWMV0oXILkKAr+42zIOct2J8gFPVsOLv68772Tcqvv1ifohYMDlkPBGxkmmP1M+ZclquNxRynRQ1o9ROOK4GphStYydVC+HuGOtDHoZFxxX+xx7yEUQ2EcOAwOlnVWjOcm84doQTWlnte8i8+YUpsvkyVQJBvNkOmK1vblhWHItIMyQqRGsc/Fk+sqbCVgv01GWLeZE2V4/TjJVmoGmPjyZSqfcCa5Lj7DK8qDDHkaduqJZpqJ5xh++3Z4BgyyL6q8W/0PC+RNmOf0DACha6/k2DeolD9b9laK7Z2wmXq77u0wn+76c3cc5bTvvGw4sc4oHlVmlQ8q8wgFlZtlwMrdoMJlZEhHLp6tHdxeZ8/pGpOlkOpNrLLlTZCsCw4jyaTgGBNy8SX/ZEUacPIzemjvKTjDi032mUHeRXWAxvM2Fthd5ynYY88uZnvWWrbAY3GgqeTfZBovrJ01ma0fZAuPFzO56yeZaFJdzt6GJP4YZw0XPOZPDlo356gkjD82VjXDPpX09ZUMsTnmZK55sCh0x+wtLNt3xnOfyZFO6iZdNYcomuFnZo2wKk21mup8jmweQU15ilCObE2yHP/Ymm2Nk/du+ZEuIbLb2JNsi5Mn3/cjWAHnc5s9rHGR7ncjaOlUfUHZJsJV/V9nVbZWdEmzUbrv+FHf+rnIbZmTtT6NwoKn4ov6Dsr05/6oX2e1QmIdQkvVWKevSMqpoNQ0/5lxhAJH1HwF1NhE2miUJmC9lwjPDHJa1OEHI4eMEFTYRVBp1lACwkgl/JobWYa6KQCzG40mGGwsXCKh0VK0mq+73Iltcj+UYiFDMF1meSwJMkrRUPkjeLoDBvEtgcb0WoADgeq0GKbKKmHfB4nouuVFpm4fTM7C4/ouMjBul1uTq/7eeK8IRjnCEIxzhCEf447dnbTqmyC8I+uIAAAAASUVORK5CYII=" alt="">
+                <form class="form-signin" ng-submit="vm.submitLogin()">
+                    <input type="email" class="form-control" ng-model="vm.user.email" placeholder="E-mail" required autofocus>
+                    <input type="password" class="form-control" ng-model="vm.user.pwd" placeholder="Senha" required>
+                    <button class="btn btn-lg btn-success btn-block" type="submit">Entrar</button>
+
+                    <div class="alert alert-danger" role="alert" ng-show="vm.err">
+                      <span ng-bind="vm.err"></span>
+                    </div>
+                </form>
+            </div>
+            <a href="" class="text-center new-account" ng-click="vm.createUser()">Criar uma conta</a>
+
+            <div class="account-wall create" ng-show="vm.createNewUser">
+                <form class="form-signin" ng-submit="vm.submitCreate()">
+                    <a href="" class="pull-right close" ng-click="vm.createUser()">
+                      <span aria-hidden="true">&times;</span>
+                    </a>
+                    <h4 class="text-center text-uppercase">Registre-se</h4>
+                    <input type="text" class="form-control" ng-model="vm.userCreate.name" placeholder="Nome" required autofocus>
+                    <input type="email" class="form-control" ng-model="vm.userCreate.email" placeholder="E-mail" required>
+                    <input type="password" class="form-control" ng-model="vm.userCreate.pwd" placeholder="Senha" required>
+                    <button class="btn btn-lg btn-success btn-block" type="submit">Cadastrar</button>
+
+                    <div class="alert alert-danger" role="alert" ng-show="vm.errCreate">
+                      <span ng-bind="vm.errCreate"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

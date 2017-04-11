@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row profile">
+  		  <div class="col-md-offset-3 col-md-6">
+            <h3>Notificações</h3>
+
+          <div class="col-sm-12 col-md-12 item-not" ng-repeat="not in vm.listNotifications">
+              <h4><b>{{not.user_name_father}}</b> deseja conectar-se a você, aceitar?</h4>
+              <div class="col-md-12">
+                  <button type="button" name="yes" class="btn btn-success btn-block" ng-click="vm.acceptFriend(not)">Sim</button>
+                  <button type="button" name="no" class="btn btn-default btn-block" ng-click="vm.rejectFriend(not)">Não</button>
+              </div>
+              <hr>
+          </div>
+
+          <div class="col-sm-12 col-md-12 text-center" ng-if="!vm.listNotifications.length">
+              Você não possui notificações, <a href="#!/home">voltar pra Home <span class="glyphicon glyphicon-arrow-right"></span></a>
+          </div>
+        </div>
+    </div>
+</div>
