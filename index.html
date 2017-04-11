@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="app.dpa">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>DPA 1 - Denner Evaldt Machado</title>
+
+    <link rel="shortcut icon" href="https://www.moodle.unisinos.br/theme/image.php/unisinos_uaec_lato_2015/theme/1489584425/favicon" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div ng-view class="container"></div>
+
+    <!-- ng -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.6.3/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.6.3/angular-cookies.min.js"></script>
+
+    <!-- general module -->
+    <script type="text/javascript" src="js/app.module.js"></script>
+    <script type="text/javascript" src="js/app.config.js"></script>
+
+    <!-- directives -->
+    <script type="text/javascript" src="js/directives/file.directive.js"></script>
+
+    <!-- login module -->
+    <script type="text/javascript" src="js/login/login.module.js"></script>
+    <script type="text/javascript" src="js/login/login.service.js"></script>
+    <script type="text/javascript" src="js/login/login.route.js"></script>
+    <script type="text/javascript" src="js/login/controllers/login.controller.js"></script>
+
+    <!-- home module -->
+    <script type="text/javascript" src="js/home/home.module.js"></script>
+    <script type="text/javascript" src="js/home/home.service.js"></script>
+    <script type="text/javascript" src="js/home/home.route.js"></script>
+    <script type="text/javascript" src="js/home/controllers/home.controller.js"></script>
+    <script type="text/javascript" src="js/home/controllers/search.controller.js"></script>
+    <script type="text/javascript" src="js/home/controllers/notification.controller.js"></script>
+
+  </body>
+</html>
